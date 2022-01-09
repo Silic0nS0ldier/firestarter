@@ -7,9 +7,6 @@ function Start-AppInstall([string] $Query) {
     $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown");
 }
 
-# DBeaver
-Start-AppInstall -Query DBeaver
-
 # Spotify
 Start-AppInstall -Query Spotify
 

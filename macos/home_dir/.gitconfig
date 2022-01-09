@@ -1,0 +1,24 @@
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[protocol]
+	version = 2
+[user]
+	email = ______
+	name = Jordan Mele
+[init]
+	defaultBranch = main
+[core]
+	editor = code --wait
+	commitGraph = true
+	untrackedCache = true
+[diff]
+	tool = default-difftool
+[difftool "default-difftool"]
+	cmd = code --wait --diff $LOCAL $REMOTE
+[credential]
+	helper = /usr/local/share/gcm-core/git-credential-manager-core
+[pack]
+	useSparse = true
